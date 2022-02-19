@@ -37,13 +37,14 @@ function showSlides(n) {    // defining function
 
 
 function countdown() {
-    var seconds=document.getElementById("seconds").ariaValueMax;
+    var seconds=document.getElementById("seconds").value;
+
     function tick() {
-        seconds=seconds-1;
-        TimeRanges.innerHTML=seconds;
-        setTimeout (tick,1000);
-        if (seconds==-1) {
-            alert ("Time's up");
+        seconds= seconds - 1;
+        timer.innerHTML=seconds;
+        setTimeout (tick, 1000);
+        if (seconds == -1) {
+            alert ("Time's up!");
         }
     }
     tick();
